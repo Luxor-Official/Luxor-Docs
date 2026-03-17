@@ -27,6 +27,7 @@
       {
         "tab": "STARR",
         "icon": "star",
+        "hidden": true,
         "groups": [
           {
             "group": "Information",
