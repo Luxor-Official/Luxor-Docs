@@ -1,0 +1,54 @@
+---
+title: "Whitelisting"
+icon: "shield-keyhole"
+---
+
+Guide on whitelisting people in STARR. <Badge color="red">Hardcoded</Badge>
+
+We use a hardcoded whitelist as Roblox's datastores can fail or lose saved data.
+
+<Steps>
+  <Step title="Finding the whitelist">
+    Go to **ServerScriptService** then open the **STARR** folder and find the script called `Server` and below it you will find a Module Script called `Configuration` and open it.
+  </Step>
+  <Step title="What am i looking at?">
+    Seeing the Configuration module for the first time may seem confusing so lets make that less.
+
+    1. First off you will see the `General` table which holds the general configuration for STARR such as `prefix`, `Ban Datastore`, `Roles`.
+    2. Second you will see the **RoleConfig** table which holds all the role for your version of STARR E.g Admin, Head Admin etc.
+    3. Lastly you will see the `Anti-Exploit` table which holds the anti-exploit settings. <Badge color="red">STARR+ ONLY</Badge> 
+  </Step>
+  <Step title="Setting up roles">
+    Lets get roles setup, first STARR has some base roles already setup such as Admin and Owner.
+
+    It will look like this, all roles can be changed or deleted.
+
+    ```lua expandable lines
+    Founder = {
+    				GroupRank = nil,
+    				level = 100,
+    				perms = {all = true},
+    				CmdUsage = {
+    					CanUseOnOthers = true
+    				}
+    		   },
+    ```
+
+    Now lets understand the role layout, you can change the role name by changing the table name such as `Founder = {}` can be changed to `Owner = {}` its that easy.
+
+    Within each role table you have:\\
+
+    - GroupRank (Determines what group role equals this role E.g GroupRank = 200)\\
+    - level (Determines how high this role is)\\
+    - perms (Determines what commands this role + can use)\\
+    - CmdUsage (Command usage for this role)\
+                 → CanUseOnOthers (Can this role use commands on others)
+  </Step>
+  <Step title="Adding players to roles manually">
+    You can add players to roles by finding the **Roles** table under **General** and putting `[UserID] = "RoleName",`
+  </Step>
+</Steps>
+
+<Warning>
+  If you require more help setting up STARR then please open a support ticket.
+</Warning>

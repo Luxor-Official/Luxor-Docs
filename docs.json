@@ -20,9 +20,22 @@
       {
         "tab": "STARR",
         "icon": "star",
-        "pages": [
-          "information",
-          "untitled-page"
+        "groups": [
+          {
+            "group": "Information",
+            "icon": "book-bookmark",
+            "pages": [
+              "information"
+            ]
+          },
+          {
+            "group": "Install",
+            "icon": "download",
+            "pages": [
+              "untitled-page",
+              "whitelisting"
+            ]
+          }
         ]
       }
     ]
