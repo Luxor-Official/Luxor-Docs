@@ -13,9 +13,15 @@
       {
         "tab": "Intro",
         "icon": "book-atlas",
-        "pages": [
-          "index",
-          "TOS"
+        "groups": [
+          {
+            "group": "Studio",
+            "icon": "bookmark",
+            "pages": [
+              "index",
+              "TOS"
+            ]
+          }
         ]
       },
       {
