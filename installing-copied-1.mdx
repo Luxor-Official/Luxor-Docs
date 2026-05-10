@@ -5,22 +5,21 @@ icon: "screwdriver"
 
 A guide on installing MOON into your game!
 
-<Note>
-  This product requires 'loadstrings' to be enabled to work.
-</Note>
-
 <Steps>
   <Step title="Aquire MOON">
     Head to our roblox hub and buy MOON. Then you will get a direct message from **Vault** with the download file.
   </Step>
   <Step title="Add the file">
-    Download the file from **Vault** and open roblox studio then drop the `.rbxm` file into workspace and ungroup the folders the the correct spaces.
+    Download the file from **Vault** and open roblox studio then drop the `.rbxm` file into workspace and right click it and make it a `LocalPlugin`. To install Moon into your game click **Moon Inject**.
   </Step>
-  <Step title="Adding a webhook">
-    To allow **MOON** to work you will need a webhook url for your mod calls to log to a discord channel.
+  <Step title="Configuration">
+    To configure MOON's settings you must click the **Moon Config** button under plugins.
 
-    1. Open the **MoonSettings** module that is found under the Server script in the MOON ServerScriptService.
-    2. You will see `["WebhookUrl"] = "???"` and you need to paste the webhook url there.
+    1. Once clicked a widget will open on to your screen.
+    2. You will see the first option is Webhook URL and you need to paste the webhook url there.
+    3. Next are misc settings which are pretty self explanatory
+    4. Once configured to your liking click the **Save** button at the bottom of the widget. Once saved you will see a module script appear in **ServerStorage** which holds you config data.
+    5. To change you settings re-open the widget again and change it to your liking and click **Save** again and it will auto update the module.
 
     If you don't know how to get a webhook url follow this video → [https://www.youtube.com/watch?v=fKksxz2Gdnc](https://www.youtube.com/watch?v=fKksxz2Gdnc)
 
@@ -29,7 +28,3 @@ A guide on installing MOON into your game!
     </Danger>
   </Step>
 </Steps>
-
-<Warning>
-  Make sure all folders are in the respective places otherwise MOON won’t work.
-</Warning>
